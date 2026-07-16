@@ -1,0 +1,35 @@
+# Parking Fee Calculator
+
+# Input details
+vehicle = input("Enter Vehicle Type (Bike/Car/Bus): ").lower()
+hours = int(input("Enter Parking Duration (in hours): "))
+
+# Calculate parking fee
+if vehicle == "bike":
+    rate = 20      # ₹20 per hour
+elif vehicle == "car":
+    rate = 50      # ₹50 per hour
+elif vehicle == "bus":
+    rate = 100     # ₹100 per hour
+else:
+    print("Invalid Vehicle Type!")
+    exit()
+
+# Total parking fee
+fee = rate * hours
+
+# Display result
+print("\n----- Parking Fee Details -----")
+print("Vehicle Type    :", vehicle.title())
+print("Parking Hours   :", hours)
+print("Rate per Hour   : ₹", rate)
+print("Total Parking Fee: ₹", fee)
+output:
+Enter Vehicle Type (Bike/Car/Bus): Car
+Enter Parking Duration (in hours): 4
+
+----- Parking Fee Details -----
+Vehicle Type    : Car
+Parking Hours   : 4
+Rate per Hour   : ₹ 50
+Total Parking Fee: ₹ 200
