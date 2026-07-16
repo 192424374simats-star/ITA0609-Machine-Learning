@@ -1,0 +1,31 @@
+# Vehicle Fuel Cost Estimator
+
+# Input details
+distance = float(input("Enter distance to travel (in km): "))
+mileage = float(input("Enter vehicle mileage (km per litre): "))
+fuel_price = float(input("Enter fuel price per litre (₹): "))
+
+# Calculate fuel required
+fuel_needed = distance / mileage
+
+# Calculate total fuel cost
+total_cost = fuel_needed * fuel_price
+
+# Display result
+print("\n----- Vehicle Fuel Cost Estimator -----")
+print("Distance        :", distance, "km")
+print("Mileage         :", mileage, "km/l")
+print("Fuel Required   :", round(fuel_needed, 2), "litres")
+print("Fuel Price      : ₹", fuel_price, "per litre")
+print("Total Fuel Cost : ₹", round(total_cost, 2))
+output:
+Enter distance to travel (in km): 300
+Enter vehicle mileage (km per litre): 15
+Enter fuel price per litre (₹): 105
+
+----- Vehicle Fuel Cost Estimator -----
+Distance        : 300.0 km
+Mileage         : 15.0 km/l
+Fuel Required   : 20.0 litres
+Fuel Price      : ₹ 105.0 per litre
+Total Fuel Cost : ₹ 2100.0
