@@ -1,0 +1,25 @@
+# Library Fine Calculator
+
+# Input overdue days
+days = int(input("Enter the number of overdue days: "))
+
+# Calculate fine
+if days <= 5:
+    fine = days * 2      # ₹2 per day
+elif days <= 10:
+    fine = days * 5      # ₹5 per day
+elif days <= 20:
+    fine = days * 10     # ₹10 per day
+else:
+    fine = days * 20     # ₹20 per day
+
+# Display result
+print("\n----- Library Fine Details -----")
+print("Overdue Days :", days)
+print("Fine Amount  : ₹", fine)
+output:
+Enter the number of overdue days: 12
+
+----- Library Fine Details -----
+Overdue Days : 12
+Fine Amount  : ₹ 120
