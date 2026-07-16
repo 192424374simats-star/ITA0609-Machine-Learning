@@ -1,0 +1,30 @@
+# Attendance Percentage Calculator
+
+# Input total classes and attended classes
+total_classes = int(input("Enter Total Number of Classes: "))
+attended_classes = int(input("Enter Number of Classes Attended: "))
+
+# Calculate attendance percentage
+attendance = (attended_classes / total_classes) * 100
+
+# Check eligibility
+if attendance >= 75:
+    status = "Eligible for Examination"
+else:
+    status = "Not Eligible for Examination"
+
+# Display result
+print("\n----- Attendance Report -----")
+print("Total Classes      :", total_classes)
+print("Classes Attended   :", attended_classes)
+print("Attendance         :", round(attendance, 2), "%")
+print("Examination Status :", status)
+output:
+Enter Total Number of Classes: 120
+Enter Number of Classes Attended: 95
+
+----- Attendance Report -----
+Total Classes      : 120
+Classes Attended   : 95
+Attendance         : 79.17 %
+Examination Status : Eligible for Examination
