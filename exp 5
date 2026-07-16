@@ -1,0 +1,40 @@
+# Online Shopping Bill Calculator
+
+# Input purchase amount
+purchase = float(input("Enter Purchase Amount: ₹"))
+
+# Apply discount
+if purchase >= 5000:
+    discount = purchase * 0.20      # 20% discount
+elif purchase >= 3000:
+    discount = purchase * 0.10      # 10% discount
+elif purchase >= 1000:
+    discount = purchase * 0.05      # 5% discount
+else:
+    discount = 0
+
+# Amount after discount
+amount_after_discount = purchase - discount
+
+# Apply GST (18%)
+gst = amount_after_discount * 0.18
+
+# Final Bill
+total_bill = amount_after_discount + gst
+
+# Display bill details
+print("\n----- Online Shopping Bill -----")
+print("Purchase Amount      : ₹", purchase)
+print("Discount             : ₹", discount)
+print("Amount After Discount: ₹", amount_after_discount)
+print("GST (18%)            : ₹", gst)
+print("Total Bill           : ₹", total_bill)
+output:
+Enter Purchase Amount: ₹4000
+
+----- Online Shopping Bill -----
+Purchase Amount      : ₹ 4000.0
+Discount             : ₹ 400.0
+Amount After Discount: ₹ 3600.0
+GST (18%)            : ₹ 648.0
+Total Bill           : ₹ 4248.0
