@@ -1,0 +1,30 @@
+# Mobile Recharge Billing
+
+# Input recharge amount
+recharge = float(input("Enter Recharge Amount: ₹"))
+
+# Apply cashback/discount
+if recharge >= 1000:
+    discount = recharge * 0.20      # 20% cashback
+elif recharge >= 500:
+    discount = recharge * 0.10      # 10% cashback
+elif recharge >= 200:
+    discount = recharge * 0.05      # 5% cashback
+else:
+    discount = 0                    # No cashback
+
+# Calculate final amount
+final_amount = recharge - discount
+
+# Display bill
+print("\n----- Mobile Recharge Bill -----")
+print("Recharge Amount : ₹", recharge)
+print("Cashback        : ₹", discount)
+print("Final Amount    : ₹", final_amount)
+output:
+Enter Recharge Amount: ₹600
+
+----- Mobile Recharge Bill -----
+Recharge Amount : ₹ 600.0
+Cashback        : ₹ 60.0
+Final Amount    : ₹ 540.0
