@@ -1,0 +1,30 @@
+# Inventory Stock Management
+
+# Input product details
+product = input("Enter Product Name: ")
+stock = int(input("Enter Available Stock: "))
+
+# Input quantity sold
+sold = int(input("Enter Quantity Sold: "))
+
+# Check stock availability
+if sold <= stock:
+    stock = stock - sold
+    print("\nSale Successful!")
+    print("Remaining Stock:", stock)
+
+    # Low stock notification
+    if stock <= 10:
+        print("Warning: Low Inventory! Please Restock.")
+    else:
+        print("Stock Level is Sufficient.")
+else:
+    print("\nError: Insufficient Stock!")
+output:
+Enter Product Name: Laptop
+Enter Available Stock: 50
+Enter Quantity Sold: 45
+
+Sale Successful!
+Remaining Stock: 5
+Warning: Low Inventory! Please Restock.
