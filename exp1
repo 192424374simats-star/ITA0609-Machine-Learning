@@ -1,0 +1,44 @@
+# Student Grade Calculator
+
+# Input marks for 5 subjects
+mark1 = float(input("Enter marks for Subject 1: "))
+mark2 = float(input("Enter marks for Subject 2: "))
+mark3 = float(input("Enter marks for Subject 3: "))
+mark4 = float(input("Enter marks for Subject 4: "))
+mark5 = float(input("Enter marks for Subject 5: "))
+
+# Calculate total and average
+total = mark1 + mark2 + mark3 + mark4 + mark5
+average = total / 5
+
+# Assign grade
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+elif average >= 50:
+    grade = "E"
+else:
+    grade = "F"
+
+# Display results
+print("\n----- Student Grade Report -----")
+print("Total Marks :", total)
+print("Average Marks :", average)
+print("Grade :", grade)
+
+output:
+Enter marks for Subject 1: 85
+Enter marks for Subject 2: 90
+Enter marks for Subject 3: 78
+Enter marks for Subject 4: 88
+Enter marks for Subject 5: 92
+
+----- Student Grade Report -----
+Total Marks : 433.0
+Average Marks : 86.6
+Grade : B
