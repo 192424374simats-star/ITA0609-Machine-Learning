@@ -1,0 +1,36 @@
+# Railway Ticket Fare Calculator
+
+# Input details
+age = int(input("Enter Passenger Age: "))
+travel_class = input("Enter Class (Sleeper/AC): ").lower()
+
+# Base fare
+if travel_class == "sleeper":
+    fare = 500
+elif travel_class == "ac":
+    fare = 1000
+else:
+    print("Invalid Class!")
+    exit()
+
+# Apply concessions
+if age < 5:
+    fare = 0                  # Free ticket
+elif age <= 12:
+    fare = fare * 0.50        # 50% concession
+elif age >= 60:
+    fare = fare * 0.60        # 40% concession
+
+# Display result
+print("\n----- Railway Ticket Fare -----")
+print("Passenger Age :", age)
+print("Travel Class  :", travel_class.title())
+print("Ticket Fare   : ₹", fare)
+output:
+Enter Passenger Age: 65
+Enter Class (Sleeper/AC): AC
+
+----- Railway Ticket Fare -----
+Passenger Age : 65
+Travel Class  : Ac
+Ticket Fare   : ₹ 600.0
