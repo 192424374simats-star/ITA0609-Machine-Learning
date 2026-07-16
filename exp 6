@@ -1,0 +1,35 @@
+# Restaurant Billing System
+
+# Input prices of food items
+item1 = float(input("Enter price of Item 1: ₹"))
+item2 = float(input("Enter price of Item 2: ₹"))
+item3 = float(input("Enter price of Item 3: ₹"))
+
+# Calculate subtotal
+subtotal = item1 + item2 + item3
+
+# Calculate GST and Service Charge
+gst = subtotal * 0.05          # 5% GST
+service_charge = subtotal * 0.10   # 10% Service Charge
+
+# Calculate final bill
+total_bill = subtotal + gst + service_charge
+
+# Display bill
+print("\n----- Restaurant Bill -----")
+print("Subtotal          : ₹", subtotal)
+print("GST (5%)          : ₹", gst)
+print("Service Charge    : ₹", service_charge)
+print("-----------------------------")
+print("Total Bill        : ₹", total_bill)
+output:
+Enter price of Item 1: ₹250
+Enter price of Item 2: ₹180
+Enter price of Item 3: ₹120
+
+----- Restaurant Bill -----
+Subtotal          : ₹ 550.0
+GST (5%)          : ₹ 27.5
+Service Charge    : ₹ 55.0
+-----------------------------
+Total Bill        : ₹ 632.5
