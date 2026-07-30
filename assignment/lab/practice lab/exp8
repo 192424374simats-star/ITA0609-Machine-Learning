@@ -1,0 +1,34 @@
+# Hospital BMI Calculator
+
+# Input
+patient_name = input("Enter Patient Name: ")
+weight = float(input("Enter Weight (kg): "))
+height = float(input("Enter Height (m): "))
+
+# Calculate BMI
+bmi = weight / (height ** 2)
+
+# Classify BMI
+if bmi < 18.5:
+    status = "Underweight"
+elif bmi < 25:
+    status = "Normal Weight"
+elif bmi < 30:
+    status = "Overweight"
+else:
+    status = "Obese"
+
+# Display Results
+print("\n------ BMI Report ------")
+print("Patient Name :", patient_name)
+print("Weight       :", weight, "kg")
+print("Height       :", height, "m")
+print("BMI          :", round(bmi, 2))
+print("Health Status:", status)
+output:
+------ BMI Report ------
+Patient Name : Rahul
+Weight       : 70.0 kg
+Height       : 1.75 m
+BMI          : 22.86
+Health Status: Normal Weight
