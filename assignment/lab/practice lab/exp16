@@ -1,0 +1,25 @@
+# Online Voting Eligibility Checker
+
+# Input
+name = input("Enter Citizen Name: ")
+age = int(input("Enter Age: "))
+nationality = input("Enter Nationality: ")
+
+# Check eligibility
+if age >= 18 and nationality.lower() == "indian":
+    status = "Eligible to Vote"
+else:
+    status = "Not Eligible to Vote"
+
+# Display Result
+print("\n------ Voting Eligibility ------")
+print("Citizen Name :", name)
+print("Age          :", age)
+print("Nationality  :", nationality)
+print("Status       :", status)
+output:
+------ Voting Eligibility ------
+Citizen Name : Rahul
+Age          : 21
+Nationality  : Indian
+Status       : Eligible to Vote
