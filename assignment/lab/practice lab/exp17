@@ -1,0 +1,45 @@
+# Password Strength Checker
+
+# Input
+password = input("Enter Password: ")
+
+# Check conditions
+length = len(password) >= 8
+uppercase = False
+lowercase = False
+digit = False
+special = False
+
+# Check each character
+for ch in password:
+    if ch.isupper():
+        uppercase = True
+    elif ch.islower():
+        lowercase = True
+    elif ch.isdigit():
+        digit = True
+    elif ch in "!@#$%^&*()-_=+[]{};:'\",.<>?/\\|":
+        special = True
+
+# Verify password strength
+if length and uppercase and lowercase and digit and special:
+    print("\nPassword is Strong")
+else:
+    print("\nPassword is Weak")
+
+# Display condition status
+print("\nPassword Check")
+print("Minimum 8 Characters :", length)
+print("Uppercase Letter     :", uppercase)
+print("Lowercase Letter     :", lowercase)
+print("Digit                :", digit)
+print("Special Character    :", special)
+output:
+Password is Strong
+
+Password Check
+Minimum 8 Characters : True
+Uppercase Letter     : True
+Lowercase Letter     : True
+Digit                : True
+Special Character    : True
