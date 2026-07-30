@@ -1,0 +1,25 @@
+# Inventory Stock Management
+
+# Input
+product_name = input("Enter Product Name: ")
+stock = int(input("Enter Available Stock: "))
+minimum_stock = int(input("Enter Minimum Stock Level: "))
+
+# Check stock status
+if stock < minimum_stock:
+    status = "Low Stock! Please Restock."
+else:
+    status = "Stock Level is Sufficient."
+
+# Display Result
+print("\n------ Inventory Stock Report ------")
+print("Product Name      :", product_name)
+print("Available Stock   :", stock)
+print("Minimum Stock     :", minimum_stock)
+print("Status            :", status)
+output:
+------ Inventory Stock Report ------
+Product Name      : Laptop
+Available Stock   : 15
+Minimum Stock     : 20
+Status            : Low Stock! Please Restock.
