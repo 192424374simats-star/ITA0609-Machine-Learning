@@ -1,0 +1,17 @@
+Password is Strong
+
+Password Check
+Minimum 8 Characters : True
+Uppercase Letter     : True
+Lowercase Letter     : True
+Digit                : True
+Special Character    : True
+output:
+Password is Strong
+
+Password Check
+Minimum 8 Characters : True
+Uppercase Letter     : True
+Lowercase Letter     : True
+Digit                : True
+Special Character    : True
