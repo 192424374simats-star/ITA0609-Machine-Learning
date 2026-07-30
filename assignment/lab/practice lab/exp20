@@ -1,0 +1,59 @@
+# Movie Ticket Booking System
+
+# Input
+customer_name = input("Enter Customer Name: ")
+
+print("\nSeat Categories")
+print("1. Silver")
+print("2. Gold")
+print("3. Platinum")
+
+choice = int(input("Enter Seat Category (1/2/3): "))
+seats = int(input("Enter Number of Seats: "))
+
+# Seat price
+if choice == 1:
+    category = "Silver"
+    price = 150
+elif choice == 2:
+    category = "Gold"
+    price = 250
+elif choice == 3:
+    category = "Platinum"
+    price = 350
+else:
+    print("Invalid Seat Category!")
+    exit()
+
+# Calculate total amount
+total = seats * price
+
+# Apply discount
+if total >= 2000:
+    discount = total * 0.20      # 20%
+elif total >= 1000:
+    discount = total * 0.10      # 10%
+else:
+    discount = 0
+
+# Final amount
+final_amount = total - discount
+
+# Display Result
+print("\n------ Movie Ticket Bill ------")
+print("Customer Name :", customer_name)
+print("Seat Category :", category)
+print("Number of Seats :", seats)
+print("Ticket Price  : Rs.", price)
+print("Total Amount  : Rs.", total)
+print("Discount      : Rs.", discount)
+print("Final Amount  : Rs.", final_amount)
+output:
+------ Movie Ticket Bill ------
+Customer Name : Rahul
+Seat Category : Gold
+Number of Seats : 5
+Ticket Price  : Rs. 250
+Total Amount  : Rs. 1250
+Discount      : Rs. 125.0
+Final Amount  : Rs. 1125.0
