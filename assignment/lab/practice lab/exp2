@@ -1,0 +1,40 @@
+# Employee Salary Calculator
+
+# Input
+employee_name = input("Enter Employee Name: ")
+basic_salary = float(input("Enter Basic Salary: "))
+
+# Calculate allowances
+hra = basic_salary * 0.20      # 20% HRA
+da = basic_salary * 0.10       # 10% DA
+
+# Gross Salary
+gross_salary = basic_salary + hra + da
+
+# Deductions
+pf = basic_salary * 0.12       # 12% PF
+tax = gross_salary * 0.05      # 5% Tax
+
+# Net Salary
+net_salary = gross_salary - (pf + tax)
+
+# Display Results
+print("\n------ Employee Salary Details ------")
+print("Employee Name :", employee_name)
+print("Basic Salary  :", basic_salary)
+print("HRA           :", hra)
+print("DA            :", da)
+print("Gross Salary  :", gross_salary)
+print("PF Deduction  :", pf)
+print("Tax Deduction :", tax)
+print("Net Salary    :", net_salary)
+output:
+------ Employee Salary Details ------
+Employee Name : Rahul
+Basic Salary  : 50000.0
+HRA           : 10000.0
+DA            : 5000.0
+Gross Salary  : 65000.0
+PF Deduction  : 6000.0
+Tax Deduction : 3250.0
+Net Salary    : 55750.0
