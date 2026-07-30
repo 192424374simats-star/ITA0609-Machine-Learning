@@ -1,0 +1,35 @@
+# Restaurant Billing System
+
+# Input
+customer_name = input("Enter Customer Name: ")
+
+item1 = float(input("Enter Price of Item 1: "))
+item2 = float(input("Enter Price of Item 2: "))
+item3 = float(input("Enter Price of Item 3: "))
+
+# Calculate total food bill
+food_bill = item1 + item2 + item3
+
+# GST (5%)
+gst = food_bill * 0.05
+
+# Service Charge (10%)
+service_charge = food_bill * 0.10
+
+# Final Bill
+total_bill = food_bill + gst + service_charge
+
+# Display Result
+print("\n------ Restaurant Bill ------")
+print("Customer Name :", customer_name)
+print("Food Bill     : Rs.", food_bill)
+print("GST (5%)      : Rs.", gst)
+print("Service Charge (10%) : Rs.", service_charge)
+print("Total Bill    : Rs.", total_bill)
+output:
+------ Restaurant Bill ------
+Customer Name : Rahul
+Food Bill     : Rs. 550.0
+GST (5%)      : Rs. 27.5
+Service Charge (10%) : Rs. 55.0
+Total Bill    : Rs. 632.5
